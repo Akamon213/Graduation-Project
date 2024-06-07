@@ -1,0 +1,18 @@
+
+
+yolo train resume model=runs\train\exp5\weights\last.pt
+
+# yolov8s
+python ./train.py --epochs 200 --yaml ultralytics/cfg/models/v8/yolov8s.yaml --cfg ultralytics/cfg/default.yaml --data ultralytics/cfg/datasets/VOC_PCB.yaml --weights weights/yolov8s.pt --workers 4 --batch 100
+
+
+# yolov8s-faster
+python ./train.py --epochs 150 --yaml ultralytics/cfg/models/v8/yolov8s-FasterNet.yaml --cfg ultralytics/cfg/default.yaml --data ultralytics/cfg/datasets/VOC_PCB.yaml --weights weights/yolov8s.pt --workers 4 --batch 128
+
+
+# 评估
+python ./val.py --data  ultralytics\cfg\datasets\VOC_PCB.yaml --weight runs\train\exp4\weights\best.pt
+
+
+
+

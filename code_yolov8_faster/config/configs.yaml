@@ -1,0 +1,23 @@
+
+CONFIG:
+  # MODE: 'project'
+  
+  MODEL: 'YOLOV8'
+  
+  DEVICE: 0
+
+
+YOLOV8:
+  # 模型文件
+  WEIGHT: 'ultralytics\runs\train\exp4\weights\best.pt'
+  # 阈值
+  CONF: 0.4
+  # 过滤类别
+  CLASSES: None
+
+
+# ultralytics\runs\train\exp4\weights\best.pt
+# ultralytics\runs\train\exp3\weights\best.pt
+
+
+
